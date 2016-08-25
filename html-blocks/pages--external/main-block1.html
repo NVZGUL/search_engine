@@ -1,0 +1,21 @@
+
+<div class="wrapper wrapper_big" ng-controller="SearcherController1">
+    <div class="form_1">
+        <form name="Form1" action="" method="post">
+            <input name="myname" type="URL"  ng-model="inputText1" ng-model-options="{ debounce: 250 }" placeholder="Input your Url" required/>
+            <button class="mb-btn_submit" type="submit">Search</button>
+        </form>
+        <button  class="mb-btn mb-btn_clean" ng-click="clean()">X</button>
+        <div></div>
+        <div class="mb-container" ng-show="inputText1">
+            <ul>
+                <li><a href="#">{{ inputText1 | Phrase }}</a></li>
+                <li><a href="#">{{ inputText1 | Domain }}</a></li>
+                <li><a href="#">{{ inputText1 | Url    }}</a></li>
+            </ul>
+            <button class="mb-btn mb-btn_phrase" type="button">in <span>Phrase Overview</span></button>
+            <button class="mb-btn mb-btn_domain" type="button">in <span>Domain Overview</span></button>
+            <button class="mb-btn mb-btn_url"    type="button">in <span>Url    Overview</span></button>
+        </div>
+    </div>
+</div>
