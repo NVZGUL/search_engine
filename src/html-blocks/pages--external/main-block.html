@@ -1,0 +1,51 @@
+<div ng-app="SearcherApp">
+    <div class="c_a">
+        <h3>The main task</h3>
+    </div>
+
+    <div class="wrapper wrapper_middle"  ng-controller="SearcherController">
+        <div class="form_1">
+            <form name="Form1" action="https://super-analytics.com" method="post">
+                <input name="myInput" type="URL" id="help" ng-model="inputText" ng-model-options="{ debounce: 250 }" placeholder="Input your Url" required/>
+                <button class="mb-btn_submit" type="submit">Search</button>
+            </form>
+            <button name="myBtn" id="clean" class="mb-btn mb-btn_clean" ng-click="clean()">X</button>
+            <div></div>
+            <div class="mb-container" ng-show="inputText">
+                <ul>
+                    <li><a href="{{ inputText | Phrase }}">        {{ inputText | Phrase }}</a></li>
+                    <li><a href="https://{{ inputText | Domain }}">{{ inputText | Domain }}</a></li>
+                    <li><a href="https://{{ inputText | Url    }}">{{ inputText | Url    }}</a></li>
+                </ul>
+                <button class="mb-btn mb-btn_phrase" type="button">in <a href="{{ inputText | Phrase }}">        Phrase Overview</a></button>
+                <button class="mb-btn mb-btn_domain" type="button">in <a href="https://{{ inputText | Domain }}">Domain Overview</a></button>
+                <button class="mb-btn mb-btn_url"    type="button">in <a href="https://{{ inputText | Url    }}">Url    Overview</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="c_a">
+        <h3>Additional task №2</h3>
+    </div>
+
+    <div class="wrapper wrapper_big" ng-controller="SearcherController1">
+        <div class="form_1">
+            <form name="Form1" action="https://super-analytics.com" method="post">
+                <input name="myInput" type="URL" id="help1" ng-model="inputText1" ng-model-options="{ debounce: 250 }" placeholder="Input your Url" required/>
+                <button class="mb-btn_submit" type="submit">Search</button>
+            </form>
+            <button name="myBtn" id="clean1" class="mb-btn mb-btn_clean" ng-click="clean()">X</button>
+            <div></div>
+            <div class="mb-container" ng-show="inputText1">
+                <ul>
+                    <li><a href="{{ inputText | Phrase }}">        {{ inputText1 | Phrase }}</a></li>
+                    <li><a href="https://{{ inputText | Domain }}">{{ inputText1 | Domain }}</a></li>
+                    <li><a href="https://{{ inputText | Url    }}">{{ inputText1 | Url    }}</a></li>
+                </ul>
+                <button class="mb-btn mb-btn_phrase" type="button">in <a href="{{ inputText | Phrase }}">        Phrase Overview</a></button>
+                <button class="mb-btn mb-btn_domain" type="button">in <a href="https://{{ inputText | Domain }}">Domain Overview</a></button>
+                <button class="mb-btn mb-btn_url"    type="button">in <a href="https://{{ inputText | Url    }}">Url    Overview</a></button>
+            </div>
+        </div>
+    </div>
+</div>

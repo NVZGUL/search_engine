@@ -1,0 +1,107 @@
+.c_a{
+  text-align: center;
+  text-transform: uppercase;
+}
+.wrapper{
+  &_middle {
+    width: @mb-wrapper-width_middle;
+  }
+  &_big {
+    width: @mb-wrapper-width_big;
+  }
+  margin: 40px auto;
+  .form{
+    &_1{
+      position: relative;
+      width: 100%;
+      input {
+        width: 75%;
+        padding: 5px;
+      }
+      button{
+        padding: 5px;
+        span{
+          color: #337ab7;
+        }
+      }
+      .mb-container{
+        position: relative;
+      }
+      .mb-btn_submit{
+        display: inline-block;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        user-select: none;
+        padding: .5em 2em;
+        outline: none;
+        border: 2px solid;
+        border-radius: 1px;
+        transition: 0.2s;
+        &:hover{
+          background: rgba(255,255,255,.2);
+          color: #000;
+        }
+        &:active{
+          background: #000;
+        }
+      }
+      .mb-btn{
+        outline-style: none;
+        border: none;
+        background-color: @mb-white-color;
+        position: absolute;
+        right: 25.1%;
+        &:before {
+          position: absolute;
+          display: block;
+          width: 10px;
+          margin-left: -15px;
+          background-image: linear-gradient(to right,#fff,#fff 10%);
+          top: 3px;
+          height: 23px;
+          content: '';
+          opacity: 0.4;
+        }
+        &_clean{
+          top: 3px;
+        }
+        &_phrase{
+          top: 1px;
+        }
+        &_domain{
+          top: 30px;
+        }
+        &_url{
+          top: 60px;
+        }
+      }
+      ul {
+        width: 75%;
+        list-style-type: none;
+        margin: 1px 0 0 0;
+        padding: 0;
+        border: 1px solid #314e6e;
+        li{
+          white-space: nowrap;
+          text-overflow: clip;
+          overflow: hidden;
+          padding: 5px;
+          a {
+            color: #000;
+            &:hover{
+              cursor: pointer;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .btn-clean_enable{
+        opacity: 1;
+      }
+      .btn-clean_disable{
+        opacity: 0;
+      }
+    }
+  }
+}
